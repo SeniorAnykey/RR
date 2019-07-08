@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH=$PATH:/usr/games
 function die {
 cowsay "You DIED!" | lolcat -p 5.0
 }
