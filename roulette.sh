@@ -1,14 +1,13 @@
 #!/bin/bash
 function die {
-/usr/games/cowsay "You DIED!"
+cowsay "You DIED!" | lolcat -p 5.0
 }
 
 function live {
-/usr/games/cowsay "You live!"
+cowsay "You live!" | lolcat -p 5.0 -a -d 3
 }
 
 while true
 do
 [ $[ $RANDOM % 6 ] = 0 ] && die && break || live
-sleep 2
 done
